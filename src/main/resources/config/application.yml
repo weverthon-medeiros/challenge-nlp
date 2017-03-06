@@ -1,0 +1,30 @@
+server:
+    context-path: /challenge
+    port: 8080
+spring:
+    application:
+        name: challenge
+    datasource:
+        driver-class-name: org.h2.Driver
+        url: jdbc:h2:file:~/challenge
+        username: sa
+        password:
+    jpa:
+        show-sql: true
+        #database-platform: org.hibernate.dialect.Oracle10gDialect
+        #database: oracle
+        hibernate:
+            ddl-auto: create
+    jackson:
+        locale: pt_BR
+        time-zone: America/Fortaleza
+        serialization:
+            INDENT_OUTPUT: true
+    messages:
+        basename: messages/messages
+        encoding: UTF-8
+    devtools:
+        restart:
+          enabled: true
+        livereload:
+            enabled: true
